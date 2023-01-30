@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: eks-charts
+  namespace: default
+spec:
+  interval: 5m
+  url: https://github.com/aws/aws-node-termination-handler 
+  ref:
+    branch: main 
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/config/helm/
