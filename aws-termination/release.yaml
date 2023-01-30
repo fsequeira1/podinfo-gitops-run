@@ -8,7 +8,17 @@ spec:
   chart:
     spec:
       chart: ./config/helm/aws-node-termination-handler
+      version: 0.x.x
       sourceRef:
         kind: GitRepository
         name: eks-charts
   interval: 1m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    rbac:
+      pspEnabled: false
+    podLabels:
+      test/eim: "eim-${EIM}"
