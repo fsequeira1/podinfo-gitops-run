@@ -16,8 +16,8 @@ spec:
   postBuild:
     substitute:
       #EIM: "12345"
-      EIM: "\"12345\""
-      #EIM: "\'12345\'"
+      #EIM: "\"12345\""
+      EIM: "\'12345\'"
       #EIM: '12345'
     #substituteFrom:
     #  - kind: ConfigMap
