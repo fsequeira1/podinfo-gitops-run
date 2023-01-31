@@ -4,7 +4,7 @@ metadata:
   name: aws-termination
   namespace: flux-system
 spec:
-  interval: 1h0m0s
+  interval: 1m0s
   path: ./aws-termination
   prune: true
   sourceRef:
