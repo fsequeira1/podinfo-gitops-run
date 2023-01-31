@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: aws-node-termination
+  name: node-termination
   namespace: flux-system
 data:
   EIM: "12345"
