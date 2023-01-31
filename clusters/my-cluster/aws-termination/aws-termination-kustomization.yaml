@@ -17,8 +17,8 @@ spec:
     substitute:
       #EIM: "12345"
       #EIM: "\"12345\""
-      EIM: "\'12345\'"
-      #EIM: '12345'
+      #EIM: "\'12345\'" #✗ Kustomization reconciliation failed: var substitution failed for 'node-termination': YAMLToJSON: YAMLToJSON: yaml: line 21: did not find expected key
+      EIM: '12345'
     #substituteFrom:
     #  - kind: ConfigMap
     #    name: node-term
