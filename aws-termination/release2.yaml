@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1 
 kind: HelmRelease 
 metadata:
-  name: node-termination
+  name: node-termination-2
   namespace: default
 spec:
   releaseName: aws-node-termination-handler 
@@ -21,4 +21,4 @@ spec:
     rbac:
       pspEnabled: false
     podLabels:
-      test/eim: "\"${EIM}\""
+      test/eim: ${EIM}
