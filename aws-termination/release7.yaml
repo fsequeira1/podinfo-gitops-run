@@ -21,4 +21,4 @@ spec:
     rbac:
       pspEnabled: false
     podLabels:
-      test/eim: \""${EIM}\""
+      test/eim: \""${EIM}"\"
