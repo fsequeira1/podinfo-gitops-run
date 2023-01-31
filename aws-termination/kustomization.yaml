@@ -9,4 +9,6 @@ resources:
     # - release3.yaml # works, no env subs
     - release4.yaml
     - release5.yaml
+    - release6.yaml
+
 
