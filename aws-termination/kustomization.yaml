@@ -7,3 +7,6 @@ resources:
     - release1.yaml
     - release2.yaml
     - release3.yaml
+    - release4.yaml
+    - release5.yaml
+
