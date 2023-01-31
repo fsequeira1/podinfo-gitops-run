@@ -1,7 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: node-termination
+  name: node-term
   namespace: flux-system
 data:
   EIM: "12345"
+  #EIM: "\"12345\""
+  #EIM: "\'12345\'"
+  #EIM: '12345'
