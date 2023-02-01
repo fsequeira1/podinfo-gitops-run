@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1 
+kind: HelmRelease 
+metadata:
+  name: node-termination-8
+  namespace: default
+spec:
+  releaseName: aws-node-termination-handler-8
+  chart:
+    spec:
+      chart: ./config/helm/aws-node-termination-handler
+      version: 0.x.x
+      sourceRef:
+        kind: GitRepository
+        name: eks-charts
+  interval: 1m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    rbac:
+      pspEnabled: false
+    podLabels:
+      test/eim: "test-${EIM}"
