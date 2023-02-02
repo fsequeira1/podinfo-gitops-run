@@ -3,12 +3,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources: 
     - repository.yaml
-    - release.yaml
-    - release1.yaml
-    - release2.yaml
+    # - release.yaml
+    - release1.yaml # works with substitutefrom configmap
+    - release2.yaml # works with substitutefrom configmap
     # - release3.yaml # works, no env subs
-    - release4.yaml
-    - release5.yaml
-    - release6.yaml
-    - release7.yaml
-    - release8.yaml  # works
+    # - release4.yaml
+    - release5.yaml # works with substitutefrom configmap
+    # - release6.yaml
+    # - release7.yaml
+    # - release8.yaml  # works with substitute, doesn't work with substitutefrom configmap
